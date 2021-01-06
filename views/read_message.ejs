@@ -1,0 +1,28 @@
+<%- include('header'); -%>
+
+        <div class="body-container">
+                <div class="container">
+                        <div class="row justify-content-center align-items-center">
+                                <div class="col-12 text-center">
+                                        <h1 class="mt-5 mb-2">Welcome <%- Name %> </h1>
+                                </div>
+                                <div class="col-12 col-md-10 col-lg-8 mt-3 mb-3 text-center">
+                                        <% if (messages.length == 0) { %>
+                                                <p>No Secret Messages yet!</p>
+                                                <p>Did you forget to share your URL with your friends?</p>
+                                                <p><a href="/<%- username %> ">Copy from here</a></p>
+                                        <% } %>
+                                        <% if (messages.length != 0) { %>
+                                                <% messages.forEach(element => { %>
+                                                        <div class="card mt-3 text-justify">
+                                                                <div class="card- body">
+                                                                        <%- element %> 
+                                                                </div>
+                                                        </div>
+                                                <% }) %>
+                                        <% } %>
+                                </div>
+                        </div>
+                </div>
+        
+<%- include('footer'); %> 
