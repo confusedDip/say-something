@@ -7,12 +7,13 @@ require('dotenv').config();
 usernameDB = process.env.CLOUD_USERNAME;
 pwdDB = process.env.CLOUD_PASSWORD;
 
-connectDB = "mongodb+srv://" + usernameDB  + ":" + pwdDB + "@cluster0.kfy9c.mongodb.net/secretsDB?retryWrites=true&w=majority";
-
-mongoose.connect(connectDB, {
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
-});
+mongoose.connect(
+        "mongodb+srv://admin-souradip:"+pwdDB+"@cluster0.kfy9c.mongodb.net/secretsDB",
+        {
+                useNewUrlParser: true,
+                useUnifiedTopology: true,
+        }
+);
 
 const secrets_userSchema = new mongoose.Schema({
         fname: String,
