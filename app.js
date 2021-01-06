@@ -6,7 +6,7 @@ require('dotenv').config();
 
 usernameDB = process.env.CLOUD_USERNAME;
 pwdDB = process.env.CLOUD_PASSWORD;
-
+mongoose.set('bufferCommands', false);
 mongoose.connect(
         "mongodb+srv://admin-souradip:" + pwdDB +"@cluster0.kfy9c.mongodb.net/secretsDB?retryWrites=true&w=majority",
         {
