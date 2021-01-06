@@ -2,7 +2,6 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const mongoose = require("mongoose");
-var _ = require('lodash');
 require('dotenv').config();
 
 usernameDB = process.env.CLOUD_USERNAME;
@@ -144,4 +143,4 @@ if (port == null || port == "") {
 
 app.listen(port, function () {
   console.log("Server Started at Port " + port);
-});
+}); 
