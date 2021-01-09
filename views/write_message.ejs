@@ -8,9 +8,9 @@
                                         <p class="text-success"><%- status %></p>
                                 </div>
                                 <div class="col-12 col-md-10 col-lg-8 mt-5">
-                                        <form action="/write_message/<%- username %>" method="post">
+                                        <form action="/write_message/<%- username %>" method="post" >
                                                 <div class="form-group">
-                                                        <textarea name="secret" rows="6"
+                                                        <textarea id="sms" name="secret" rows="6"
                                                                 placeholder="Leave a message for <%= user %> here"
                                                                 required></textarea>
                                                         <button class="btn btn-lg btn-block">Send Message</button>
