@@ -108,10 +108,8 @@ app.post("/", function(req ,res){
                         const write_urls = req.originalUrl + "write_message/" + username;
 
                         res.render("index", {
-                                text1: "Right Click here to copy the link adress for sharing with your friends",
-                                text2: "Click here to read secret messages (Make sure to bookmark this URL for future reference)",
-                                url1: write_urls,
-                                url2: read_urls
+                                text1: "Just copy <a href = '"+write_urls+"'>this link</a> and share with your friends..Have fun..",
+                                text2: "Want to see the secret messages posted by your friends? Copy and save <a href = '"+read_urls+"'>this link</a><br>( This is an one time generated link. Make sure to keep a note of this link,otherwise you will not be able to see the secret messages)",
                         });
                 }
         });
